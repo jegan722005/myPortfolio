@@ -37,7 +37,8 @@ header>h1 {
 }
 
 header>nav {
-    width: 40%;
+    width: 50%;
+    cursor: pointer;
 }
 
 header>nav>ol {
@@ -47,19 +48,22 @@ header>nav>ol {
 
 nav>ol>li {
     filter: blur(1.5px);
+    color: white;
     list-style: none;
     position: relative;
+    font-size: 20px;
+    text-transform: capitalize;
+    
 }
 
 nav>ol>li:hover {
     filter: none;
+    color: red;
 }
 
 nav>ol>li>a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    text-transform: capitalize;
 }
 
 nav>ol>li::after {
@@ -214,7 +218,13 @@ nav>ol>li>a:hover {
     width: 300px;
     height: 300px;
     filter: brightness(80%);
-    /* filter: drop-shadow(8px 8px 10px gray); */
+    transition: transform 2s ease-in-out;
+}
+.right-side > img:hover{
+    width: 250px;
+    height: 250px;
+    transform: scale(1.10);
+
 }
 
 #home>.right-side>h1 {
@@ -330,6 +340,9 @@ nav>ol>li>a:hover {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1.5px;
 
 }
 
@@ -367,6 +380,28 @@ nav>ol>li>a:hover {
     color: rgba(0, 0, 0, 0.774);
     text-decoration: underline;
 
+}
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 30px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#alertText {
+  font-size: 20px; /* 👈 inga size increase panna mudiyum */
+  font-weight: bold;
+}
+
+.alert-box button {
+  margin-top: 10px;
+  padding: 10px 14px;
 }
 
 footer {
