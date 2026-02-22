@@ -1,3 +1,4 @@
+
 // click me btu
 function showAlert() {
     document.getElementById("customAlert").style.display = "block";
@@ -41,20 +42,22 @@ downloadBtn.addEventListener("click", () => {
 
 //View Resume
 
-let resumeView=document.getElementById("resumeView");
+let resumeViewBtn = document.getElementById("resumeView");
 
-resumeView.addEventListener("click",()=>{
+resumeViewBtn.addEventListener("click", () => {
 
-    let anchor=document.createElement("a");
-    anchor.href="https://drive.google.com/file/d/1dTZhUaP4LT8NIW6ULxuSa43IhCIyAkSa/view?usp=sharing"
-    
-    anchor.target="_blank";
+    let anchor = document.createElement("a");
+
+    anchor.href = "https://drive.google.com/file/d/1dTZhUaP4LT8NIW6ULxuSa43IhCIyAkSa/view?usp=sharing"
+
+    anchor.target = "_blank";
+
+    document.body.appendChild(anchor); // add to DOM
+    anchor.click(); // trigger download
+    document.body.removeChild(anchor); // clean up
 })
-
-
-
-
 
 // footer 
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
+
