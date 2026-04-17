@@ -25,7 +25,9 @@ skill4.innerHTML = `HTML`
 let skill5 = document.querySelector("#skill > .skills > .span5")
 skill5.innerHTML = `CSS`
 let skill6 = document.querySelector("#skill > .skills > .span6")
-skill6.innerHTML = `GitHub`
+skill6.innerHTML = `JS`
+let skill7 = document.querySelector("#skill > .skills > .span7")
+skill7.innerHTML = `GitHub`
 
 //resume btn
 

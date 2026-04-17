@@ -105,7 +105,7 @@ nav>ol>li>a:hover {
     color: red;
 }
 
-@media (max-width: 480px) {
+@media (min-width:320px) and (max-width: 480px) {
 
     h1,
     h2,
@@ -116,7 +116,6 @@ nav>ol>li>a:hover {
     header {
         height: 40px;
         justify-content: flex-start;
-        position: static;
     }
 
     header>h1 {
@@ -131,7 +130,7 @@ nav>ol>li>a:hover {
 
 /* home */
 #home {
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(to top right, white, rgba(0, 0, 0, 0.733));
     display: flex;
 }
@@ -258,9 +257,9 @@ nav>ol>li>a:hover {
 
 #home>.right-side>img {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    filter: brightness(80%);
+    width: 280px;
+    height: 280px;
+    filter: brightness(70%);
     transition: transform 2s ease-in-out;
 }
 
@@ -300,15 +299,16 @@ nav>ol>li>a:hover {
     }
 }
 
-@media (max-width:480px) {
+/* media  */
+@media (min-width:320px) and (max-width:480px) {
 
     /* home */
     #home {
-        display: block;
+        height: 100vh ;
+        flex-direction: column;
     }
 
     #home>.left-side {
-        overflow: visible;
         gap: 0px;
     }
 
@@ -359,46 +359,39 @@ nav>ol>li>a:hover {
 
     /* right-side */
     #home>.right-side {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 15px;
+        gap: 8px;
     }
 
     #home>.right-side>img {
-        margin-bottom: 20px;
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         filter: brightness(80%);
-        transition: transform 2s ease-in-out;
     }
 
     .right-side>img:hover {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         transform: scale(1.05);
     }
 
     #home>.right-side>h1 {
         font-size: 30px;
-        text-transform: uppercase;
         font-weight: 600;
     }
 
 }
 
+/* --------------------------------------- */
+
 /* about  */
 #about {
-    height: 300px;
+    height: 400px;
     background: linear-gradient(to right, white, gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 #about>p>span {
@@ -409,26 +402,59 @@ nav>ol>li>a:hover {
 #about>p {
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    word-break: break-all;
     letter-spacing: 1.2px;
 }
 
+#about>.education>h2 {
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+}
+
+.education>h3 {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.education>p {
+    margin-top: 10px;
+    text-indent: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
 /* about page */
-@media (max-width:480px) {
+@media (min-width:320px) and (max-width:480px) {
     #about {
-        gap: 25px;
+        height: 650px;
+        gap: 10px;
     }
 
     #about>p>span {
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 600;
     }
 
     #about>p {
         font-size: 16px;
         letter-spacing: 1.2px;
         line-height: 1.5em;
+        text-indent: 50px;
     }
+
+    .education>h3 {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .education>p {
+        text-indent: 20px;
+        font-size: 16px;
+    }
+
 }
 
 #skill {
@@ -439,9 +465,11 @@ nav>ol>li>a:hover {
     justify-content: center;
     align-items: center;
     gap: 30px;
+
 }
 
 .skills span {
+    cursor: pointer;
     display: inline;
     background: #00bcd4;
     width: 100%;
@@ -459,8 +487,10 @@ nav>ol>li>a:hover {
     font-size: 15px;
 }
 
+/* ----------------------------------------- */
+
 /* skills */
-@media (max-width:480px) {
+@media (min-width:320px) and (max-width:480px) {
 
     #skill {
         width: 100%;
@@ -483,9 +513,59 @@ nav>ol>li>a:hover {
     }
 }
 
+/* ---------------------------------------- */
+
 #project {
     height: 50vh;
-    background-color: green;
+    background: linear-gradient(to right, rgb(206, 190, 190), rgba(114, 111, 111, 0.685));
+}
+
+#project>h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 1px;
+    margin-bottom: 10px;
+}
+
+#project>.project1>h2 {
+    margin-left: 1px;
+    margin-bottom: 10px;
+}
+
+.project1>p {
+    margin-left: 1px;
+    text-indent: 100px;
+    line-height: 1.5em;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* project */
+@media (min-width:320px) and (max-width:480px) {
+    #project {
+        padding: 10px;
+        height: 500px;
+        background: linear-gradient(to right, rgb(206, 190, 190), rgba(114, 111, 111, 0.685));
+    }
+
+    #project>h1 {
+        font-size: 40px;
+        text-transform: capitalize;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 1px;
+        margin-bottom: 10px;
+    }
+
+    #project>.project1>h2 {
+        margin-left: 1px;
+        margin-bottom: 10px;
+    }
+
+    .project1>p {
+        text-align: justify;
+        margin-left: 1px;
+    }
 }
 
 #resume {
@@ -525,21 +605,24 @@ nav>ol>li>a:hover {
 }
 
 /* resume botton */
-@media (max-width:480px) {
-    
+@media (min-width:320px) and (max-width:480px) {
+
     #resume>h1 {
         font-size: 25px;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-}
-#resume>.btn {
-    max-width: 100%;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    #resume>.btn {
+        max-width: 100%;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
 
 }
+
+/* --------------------------------------- */
 
 #contact {
     height: 150px;
@@ -564,7 +647,6 @@ nav>ol>li>a:hover {
 
 #contact p a {
     text-decoration: none;
-    color: rgba(0, 0, 255, 0.849);
 }
 
 #contact p a:hover {
@@ -573,6 +655,7 @@ nav>ol>li>a:hover {
 
 }
 
+/* --------------------------------------- */
 
 footer {
     width: 100%;
