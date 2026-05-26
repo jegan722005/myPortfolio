@@ -27,7 +27,9 @@ skill5.innerHTML = `CSS`
 let skill6 = document.querySelector("#skill > .skills > .span6")
 skill6.innerHTML = `JS`
 let skill7 = document.querySelector("#skill > .skills > .span7")
-skill7.innerHTML = `GitHub`
+skill7.innerHTML = `React JS`
+let skill8 = document.querySelector("#skill > .skills > .span8")
+skill8.innerHTML = `GitHub`
 
 //resume btn
 
@@ -35,8 +37,8 @@ let downloadBtn = document.getElementById("resumeBtn");
 
 downloadBtn.addEventListener("click", () => {
     let anchor = document.createElement("a")
-    anchor.href = "JeganResume.pdf";
-    anchor.download = "JeganResume.pdf"
+    anchor.href = "Jegan_RESUME.pdf";
+    anchor.download = "Jegan_RESUME.pdf"
     document.body.appendChild(anchor); // add to DOM
     anchor.click(); // trigger download
     document.body.removeChild(anchor); // clean up
@@ -50,7 +52,7 @@ resumeViewBtn.addEventListener("click", () => {
 
     let anchor = document.createElement("a");
 
-    anchor.href = "https://drive.google.com/file/d/1dTZhUaP4LT8NIW6ULxuSa43IhCIyAkSa/view?usp=sharing"
+    anchor.href = "https://drive.google.com/file/d/1DSWy0mWfw63ZjOeVkEAOUhhKMGaNK43Q/view?usp=sharing"
 
     anchor.target = "_blank";
 
